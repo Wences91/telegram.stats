@@ -6,7 +6,7 @@
 #' @importFrom dplyr mutate select group_by summarise n
 #' 
 
-users_messages <- function(messages_dataframe){
+daily_messages <- function(messages_dataframe){
   
   df_dm  <- dplyr::mutate(messages_dataframe, date=as.Date(substr(date, 1, 10), format='%Y-%m-%d'))
   df_dm  <- dplyr::select(df_dm, date)
