@@ -13,7 +13,7 @@ daily_messages <- function(messages_dataframe){
   df_dm  <- dplyr::group_by(df_dm, date)
   df_dm  <- dplyr::summarise(df_dm, messages = dplyr::n())
   
-  message(print(dim(df_dm)[1], 'days with any message'))
+  message(paste(dim(df_dm)[1], 'days with any message'))
   
   empty_dates <- data.frame(date=seq(min(df_dm$date), max(df_dm$date), 1),
                             messages=0,
@@ -22,7 +22,7 @@ daily_messages <- function(messages_dataframe){
   df_dm <- rbind.data.frame(df_dm, empty_dates[which(!(empty_dates$date %in% df_dm$date)),],
                             stringsAsFactors = FALSE)
   
-  message(print(dim(df_dm)[1], 'days since the Telegram group creation'))
+  message(paste(dim(df_dm)[1], 'days since the Telegram group creation'))
   
   return(df_dm)
   
