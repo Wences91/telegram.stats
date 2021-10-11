@@ -12,6 +12,10 @@ read_log <- function(x){
   df_ms <- df[['messages']][which(df[['messages']]$type=='message'),]
   df_sv <- df[['messages']][which(df[['messages']]$type=='service'),]
   
+  print('Identified:\n')
+  print(paste(dim(df_ms)[1], 'messages\n'))
+  print(paste(length(unique(df_sv[which(df_sv$action=='invite_members'), 'actor_id'])), 'messages\n'))
+  
   return(list(df, df_ms, df_sv))
   
 }
