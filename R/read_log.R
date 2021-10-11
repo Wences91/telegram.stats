@@ -8,7 +8,7 @@
 
 read_log <- function(x){
   
-  df <- jsonlite::fromJSON('result.json')
+  df <- jsonlite::fromJSON(x)
   df_ms <- df[['messages']][which(df[['messages']]$type=='message'),]
   df_sv <- df[['messages']][which(df[['messages']]$type=='service'),]
   
