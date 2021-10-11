@@ -8,10 +8,10 @@
 
 users_messages <- function(messages_dataframe){
   
-  df_users <- messages_dataframe[,c('from', 'from_id')] %>%
-    dplyr::group_by(from, from_id) %>%
-    dplyr::summarise(messages = n()) %>%
-    dplyr::arrange(dplyr::desc(messages))
+  df_users <- messages_dataframe[,c('from', 'from_id')]
+  df_users <- dplyr::group_by(df_users,  from, from_id)
+  df_users <- dplyr::summarise(df_users, messages = n())
+  df_users <- dplyr::arrange(df_users, dplyr::desc(messages))
   
   message(paste(dim(df_users)[1]))
   
