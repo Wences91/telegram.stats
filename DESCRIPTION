@@ -11,7 +11,8 @@ Imports:
     stats,
     utils,
     jsonlite,
-    dplyr
+    dplyr,
+    lubridate
 License: GPL-3 | file LICENSE
 URL: https://github.com/Wences91/telegram.stats
 BugReports: https://github.com/Wences91/telegram.stats/issues
