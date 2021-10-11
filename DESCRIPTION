@@ -1,0 +1,19 @@
+Package: telegram.stats
+Type: Package
+Title: Telegram stats
+Version: 0.1.0
+Author: Wenceslao Arroyo-Machado [aut] (<http://orcid.org/0000-0001-9437-8757>)
+Maintainer: Wenceslao Arroyo-Machado <wences@ugr.es>
+Description: Read and analyse a Telegram group log.
+Depends:
+	R(>= 3.6.1)
+Imports:
+    stats,
+    utils,
+    dplyr
+License: GPL-3 | file LICENSE
+URL: https://github.com/Wences91/telegram.stats
+BugReports: https://github.com/Wences91/telegram.stats/issues
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
